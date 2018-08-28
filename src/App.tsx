@@ -1,13 +1,10 @@
 import * as React from 'react';
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  RouteComponentProps,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './App.css';
 
-import logo from './logo.svg';
+import { About, Home, Topics } from './components';
+import logo from './images/logo.svg';
+import withRoot from './withRoot';
 
 class App extends React.Component {
   public render() {
@@ -25,48 +22,6 @@ class App extends React.Component {
     );
   }
 }
-
-const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
-);
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-);
-
-const Topic = (props: RouteComponentProps<any>) => (
-  <div>
-    <h3>{props.match.params.topicId}</h3>
-  </div>
-);
-
-const Topics = (props: RouteComponentProps<any>) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${props.match.url}/rendering`}>Rendering with React</Link>
-      </li>
-      <li>
-        <Link to={`${props.match.url}/components`}>Components</Link>
-      </li>
-      <li>
-        <Link to={`${props.match.url}/props-v-state`}>Props v. State</Link>
-      </li>
-    </ul>
-
-    <Route path={`${props.match.path}/:topicId`} component={Topic} />
-    <Route
-      exact={true}
-      path={props.match.path}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
-);
 
 const BasicExample = () => (
   <Router>
@@ -92,4 +47,4 @@ const BasicExample = () => (
   </Router>
 );
 
-export default App;
+export default withRoot(App);
