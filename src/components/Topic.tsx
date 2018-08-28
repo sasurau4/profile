@@ -5,8 +5,12 @@ interface IParams {
   topicId: string;
 }
 
-export default (props: RouteComponentProps<IParams>) => (
+const Topic: React.SFC<RouteComponentProps<IParams>> = (
+  props: RouteComponentProps<IParams>
+) => (
   <div>
     <h3>{props.match.params.topicId}</h3>
   </div>
 );
+
+export default Topic;

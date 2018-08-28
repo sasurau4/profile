@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, Route, RouteComponentProps } from 'react-router-dom';
 import Topic from './Topic';
 
-export default (props: RouteComponentProps<{}>) => (
+const Topics = (props: RouteComponentProps<{}>) => (
   <div>
     <h2>Topics</h2>
     <ul>
@@ -25,3 +25,5 @@ export default (props: RouteComponentProps<{}>) => (
     />
   </div>
 );
+
+export default Topics;
