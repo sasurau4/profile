@@ -1,21 +1,26 @@
+import AppBar from '@material-ui/core/AppBar';
+import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header: React.StatelessComponent = () => (
   <header>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-      </ul>
-    </nav>
+    <AppBar>
+      <nav>
+        <Tabs value={false}>
+          <Link to="/">
+            <Tab label="Home" />
+          </Link>
+          <Link to="about">
+            <Tab label="Home" />
+          </Link>
+          <Link to="/topics">
+            <Tab label="Topics" />
+          </Link>
+        </Tabs>
+      </nav>
+    </AppBar>
   </header>
 );
 
