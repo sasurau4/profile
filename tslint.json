@@ -9,6 +9,8 @@
   },
   "rules": {
     "jsx-no-lambda": false,
+    "interface-name": false,
+    "no-debugger": false,
     "no-unused-variable": true
   }
 }
