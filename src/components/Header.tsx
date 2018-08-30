@@ -23,7 +23,7 @@ class Header extends React.Component<RouteComponentProps<{}>, State> {
     const { path } = this.state;
     return (
       <header>
-        <AppBar>
+        <AppBar position="static">
           <nav>
             <Tabs value={path} onChange={this.handleChange}>
               <Tab label="Home" value="/" />
