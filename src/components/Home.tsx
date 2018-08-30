@@ -1,8 +1,11 @@
+import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <Typography variant="display4" gutterBottom={true}>
+      This is Home
+    </Typography>
   </div>
 );
 
