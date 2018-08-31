@@ -1,16 +1,15 @@
 import AppBar from '@material-ui/core/AppBar';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 interface State {
   path: string;
 }
+interface Props extends RouteComponentProps<{}> {}
 
-class Header extends React.Component<RouteComponentProps<{}>, State> {
+class Header extends React.Component<Props, State> {
   public state = {
     path: '/',
   };
@@ -25,22 +24,15 @@ class Header extends React.Component<RouteComponentProps<{}>, State> {
     const { path } = this.state;
     return (
       <header>
-        <AppBar position="absolute">
-          <Toolbar>
-            <Typography variant="headline" color="inherit" align="center">
-              Profile
-            </Typography>
-          </Toolbar>
-          <Toolbar variant="dense">
-            <nav>
-              <Tabs value={path} onChange={this.handleChange}>
-                <Tab label="Home" value="/" />
-                <Tab label="About" value="/about" />
-                <Tab label="Topics" value="/topics" />
-              </Tabs>
-            </nav>
-          </Toolbar>
-        </AppBar>
+        <nav>
+          <AppBar position="absolute">
+            <Tabs value={path} onChange={this.handleChange} centered={true}>
+              <Tab label="Home" value="/" />
+              <Tab label="About" value="/about" />
+              <Tab label="Topics" value="/topics" />
+            </Tabs>
+          </AppBar>
+        </nav>
       </header>
     );
   }
