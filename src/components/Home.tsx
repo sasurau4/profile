@@ -1,3 +1,5 @@
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 import {
   createStyles,
   Theme,
@@ -10,23 +12,46 @@ import Background from '../images/kirigamine-10_TP_V.jpg';
 
 const styles = (theme: Theme) =>
   createStyles({
-    appBarSpacer: theme.mixins.toolbar,
     backgroundContainer: {
       backgroundImage: `url(${Background})`,
+      backgroundPosition: 'center',
+      color: theme.palette.common.white,
+      height: '100vh',
+      justifyContent: 'center',
+      textAlign: 'center',
+    },
+    backgroundFilter: {
+      backgroundColor: 'rgba(0,0,0,0.5)',
+      height: '100vh',
     },
   });
 
 interface Props extends WithStyles<typeof styles> {}
 
 const Home = withStyles(styles)((props: Props) => (
-  <>
-    <div className={props.classes.appBarSpacer} />
-    <div className={props.classes.backgroundContainer}>
-      <Typography variant="display1" gutterBottom={true}>
-        This is Home
-      </Typography>
+  <Paper className={props.classes.backgroundContainer}>
+    <div className={props.classes.backgroundFilter}>
+      <Grid
+        container={true}
+        justify="center"
+        direction="column"
+        alignItems="center"
+        style={{ minHeight: '100vh' }}
+      >
+        <Typography
+          variant="display1"
+          align="center"
+          color="inherit"
+          gutterBottom={true}
+        >
+          This is Home
+        </Typography>
+        <Typography variant="headline" color="inherit" paragraph={true}>
+          This is Home
+        </Typography>
+      </Grid>
     </div>
-  </>
+  </Paper>
 ));
 
 export default Home;

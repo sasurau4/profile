@@ -1,20 +1,14 @@
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles';
+import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { About, Home, Topics } from '../components';
 
-const styles = (theme: Theme) =>
+const styles = () =>
   createStyles({
     content: {
       flexGrow: 1,
       height: '100vh',
       overflow: 'auto',
-      padding: theme.spacing.unit * 3,
     },
   });
 
