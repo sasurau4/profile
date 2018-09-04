@@ -24,6 +24,9 @@ const styles = (theme: Theme) =>
       backgroundColor: 'rgba(0,0,0,0.5)',
       height: '100vh',
     },
+    grid: {
+      minHeight: '100vh',
+    },
   });
 
 interface Props extends WithStyles<typeof styles> {}
@@ -36,18 +39,18 @@ const Home = withStyles(styles)((props: Props) => (
         justify="center"
         direction="column"
         alignItems="center"
-        style={{ minHeight: '100vh' }}
+        className={props.classes.grid}
       >
         <Typography
-          variant="display1"
+          variant="display3"
           align="center"
           color="inherit"
           gutterBottom={true}
         >
-          This is Home
+          Daiki Ihara
         </Typography>
         <Typography variant="headline" color="inherit" paragraph={true}>
-          This is Home
+          Personal biography
         </Typography>
       </Grid>
     </div>
