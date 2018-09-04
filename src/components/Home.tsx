@@ -32,7 +32,7 @@ const styles = (theme: Theme) =>
 interface Props extends WithStyles<typeof styles> {}
 
 const Home = withStyles(styles)((props: Props) => (
-  <Paper className={props.classes.backgroundContainer}>
+  <Paper id="home" className={props.classes.backgroundContainer}>
     <div className={props.classes.backgroundFilter}>
       <Grid
         container={true}

@@ -1,41 +1,45 @@
 import AppBar from '@material-ui/core/AppBar';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+
+import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
-import { RouteComponentProps, withRouter } from 'react-router';
 
-interface State {
-  path: string;
-}
-interface Props extends RouteComponentProps<{}> {}
+const styles = () =>
+  createStyles({
+    a: {
+      textDecorationLine: 'none',
+    },
+    toolbar: {
+      justifyContent: 'space-evenly',
+    },
+  });
 
-class Header extends React.Component<Props, State> {
-  public state = {
-    path: '/',
-  };
+interface Props extends WithStyles<typeof styles> {}
 
-  public handleChange = ({}, value: string) => {
-    const path: string = value;
-    this.props.history.push(path);
-    this.setState({ path });
-  };
+const routes: string[] = ['home', 'about', 'career', 'portfolio'];
 
-  public render() {
-    const { path } = this.state;
-    return (
-      <header>
-        <nav>
-          <AppBar position="absolute">
-            <Tabs value={path} onChange={this.handleChange} centered={true}>
-              <Tab label="Home" value="/" />
-              <Tab label="About" value="/about" />
-              <Tab label="Topics" value="/topics" />
-            </Tabs>
-          </AppBar>
-        </nav>
-      </header>
-    );
-  }
-}
-
-export default withRouter(Header);
+export default withStyles(styles)(function Header(props: Props) {
+  const { classes } = props;
+  return (
+    <header>
+      <nav>
+        <AppBar position="absolute">
+          <Toolbar className={classes.toolbar} variant="dense">
+            {routes.map(item => (
+              <Typography
+                color="inherit"
+                noWrap={true}
+                key={item}
+                className={classes.a}
+                component={p => <a href={`#${item}`} {...p} />}
+              >
+                {item.toUpperCase()}
+              </Typography>
+            ))}
+          </Toolbar>
+        </AppBar>
+      </nav>
+    </header>
+  );
+});

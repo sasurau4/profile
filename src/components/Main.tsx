@@ -1,7 +1,6 @@
 import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { About, Home, Topics } from '../components';
+import { About, Home } from '../components';
 
 const styles = () =>
   createStyles({
@@ -16,11 +15,8 @@ interface Props extends WithStyles<typeof styles> {}
 
 const Main = withStyles(styles)((props: Props) => (
   <main className={props.classes.content}>
-    <Switch>
-      <Route exact={true} path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
-    </Switch>
+    <Home />
+    <About />
   </main>
 ));
 
