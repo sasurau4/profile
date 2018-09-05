@@ -39,6 +39,18 @@ export default withStyles(styles)(function About(props: Props) {
           src={AndroidLogo}
           className={classes.avatar}
         />
+        <Grid item={true} xs={3}>
+          <Typography
+            variant="title"
+            align="center"
+            color="textSecondary"
+            paragraph={true}
+          >
+            Something short and leading about the collection below—its contents,
+            the creator, etc. Make it short and sweet, but not too short so
+            folks don&apos;t simply skip over it entirely.
+          </Typography>
+        </Grid>
       </Grid>
     </Paper>
   );
