@@ -13,8 +13,10 @@ import Background from '../images/kirigamine-10_TP_V.jpg';
 const styles = (theme: Theme) =>
   createStyles({
     backgroundContainer: {
+      backgroundColor: theme.palette.common.black,
       backgroundImage: `url(${Background})`,
       backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       color: theme.palette.common.white,
       height: '100vh',
       justifyContent: 'center',
