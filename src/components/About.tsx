@@ -34,12 +34,29 @@ export default withStyles(styles)(function About(props: Props) {
         <Typography variant="display3" align="center">
           About
         </Typography>
-        <Avatar
-          alt="Daiki Ihara"
-          src={AndroidLogo}
-          className={classes.avatar}
-        />
-        <Grid item={true} xs={3}>
+        <Grid
+          container={true}
+          justify="center"
+          direction="row"
+          alignItems="center"
+          spacing={24}
+        >
+          <Grid item={true}>
+            <Avatar
+              alt="Daiki Ihara"
+              src={AndroidLogo}
+              className={classes.avatar}
+            />
+          </Grid>
+          <Grid item={true}>
+            <Avatar
+              alt="Daiki Ihara"
+              src={AndroidLogo}
+              className={classes.avatar}
+            />
+          </Grid>
+        </Grid>
+        <Grid item={true} xs={6}>
           <Typography
             variant="title"
             align="center"
