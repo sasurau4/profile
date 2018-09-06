@@ -17,7 +17,7 @@ const styles = () =>
 
 interface Props extends WithStyles<typeof styles> {}
 
-const routes: string[] = ['home', 'about', 'career', 'portfolio'];
+const routes: string[] = ['home', 'about', 'career', 'contact'];
 
 export default withStyles(styles)(function Header(props: Props) {
   const { classes } = props;

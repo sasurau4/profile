@@ -1,6 +1,6 @@
 import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import * as React from 'react';
-import { About, Home } from '../components';
+import { About, Contact, Home } from '../components';
 
 const styles = () =>
   createStyles({
@@ -17,6 +17,7 @@ const Main = withStyles(styles)((props: Props) => (
   <main className={props.classes.content}>
     <Home />
     <About />
+    <Contact />
   </main>
 ));
 
