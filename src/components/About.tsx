@@ -40,7 +40,7 @@ export default withStyles(styles)(function About(props: Props) {
         spacing={32}
       >
         <Grid item={true}>
-          <Typography variant="display3" align="center">
+          <Typography variant="display3" align="center" gutterBottom={true}>
             About
           </Typography>
         </Grid>
