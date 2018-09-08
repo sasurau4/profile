@@ -18,6 +18,7 @@ const styles = (theme: Theme) =>
       width: 200,
     },
     grid: {
+      flexGrow: 1,
       maxWidth: '100vw',
       minHeight: '100vh',
     },
