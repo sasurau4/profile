@@ -15,9 +15,6 @@ const styles = (theme: Theme) =>
   createStyles({
     // Required Grid component Limitations
     // see https://material-ui.com/layout/grid/#negative-margin
-    aboutContainer: {
-      padding: 16,
-    },
     avatar: {
       height: 200,
       width: 200,
@@ -27,6 +24,9 @@ const styles = (theme: Theme) =>
       maxWidth: '100vw',
       minHeight: '100vh',
     },
+    root: {
+      padding: 16,
+    },
     toolbarSpacer: theme.mixins.toolbar,
   });
 
@@ -35,8 +35,8 @@ interface Props extends WithStyles<typeof styles> {}
 export default withStyles(styles)(function About(props: Props) {
   const { classes } = props;
   return (
-    <div className={classes.aboutContainer}>
-      <div className={classes.toolbarSpacer} id="about" />
+    <div id="about" className={classes.root}>
+      <div className={classes.toolbarSpacer} />
       <Grid
         container={true}
         justify="center"

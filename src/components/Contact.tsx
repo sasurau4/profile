@@ -28,6 +28,9 @@ const styles = (theme: Theme) =>
     linkedinIcon: {
       color: '#0077B5',
     },
+    root: {
+      padding: 16,
+    },
     toolbarSpacer: theme.mixins.toolbar,
     twitterIcon: {
       color: '#00aced',
@@ -72,8 +75,7 @@ export default withStyles(styles)(function Contact(props: Props) {
     },
   ];
   return (
-    <>
-      <div className={classes.toolbarSpacer} id="contact" />
+    <div id="contact" className={classes.root}>
       <Grid
         container={true}
         justify="center"
@@ -109,6 +111,6 @@ export default withStyles(styles)(function Contact(props: Props) {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 });

@@ -13,7 +13,6 @@ import * as React from 'react';
 
 const styles = (theme: Theme) =>
   createStyles({
-    card: {},
     chip: {
       marginBottom: theme.spacing.unit,
       marginRight: theme.spacing.unit,
@@ -26,6 +25,9 @@ const styles = (theme: Theme) =>
       flexGrow: 1,
       maxWidth: '100vw',
       minHeight: '100vh',
+    },
+    root: {
+      padding: 16,
     },
     toolbarSpacer: theme.mixins.toolbar,
   });
@@ -46,8 +48,8 @@ const firstSkills = [
 export default withStyles(styles)(function Career(props: Props) {
   const { classes } = props;
   return (
-    <>
-      <div className={classes.toolbarSpacer} id="career" />
+    <div id="career" className={classes.root}>
+      <div className={classes.toolbarSpacer} />
       <Grid
         container={true}
         justify="center"
@@ -57,12 +59,7 @@ export default withStyles(styles)(function Career(props: Props) {
         spacing={32}
       >
         <Grid item={true}>
-          <Typography variant="display3" align="center" gutterBottom={true}>
-            Career
-          </Typography>
-        </Grid>
-        <Grid item={true}>
-          <Card className={classes.card}>
+          <Card>
             <CardContent>
               <Typography variant="headline" gutterBottom={true}>
                 August 2014 - February 2017
@@ -94,7 +91,7 @@ export default withStyles(styles)(function Career(props: Props) {
           </Card>
         </Grid>
         <Grid item={true}>
-          <Card className={classes.card}>
+          <Card>
             <CardContent>
               <Typography variant="headline" gutterBottom={true}>
                 August 2014 - February 2017
@@ -126,6 +123,6 @@ export default withStyles(styles)(function Career(props: Props) {
           </Card>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 });
