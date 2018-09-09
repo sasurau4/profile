@@ -13,6 +13,11 @@ import MyPicture from '../images/my-profile-picture.jpg';
 
 const styles = (theme: Theme) =>
   createStyles({
+    // Required Grid component Limitations
+    // see https://material-ui.com/layout/grid/#negative-margin
+    aboutContainer: {
+      padding: 16,
+    },
     avatar: {
       height: 200,
       width: 200,
@@ -30,7 +35,7 @@ interface Props extends WithStyles<typeof styles> {}
 export default withStyles(styles)(function About(props: Props) {
   const { classes } = props;
   return (
-    <>
+    <div className={classes.aboutContainer}>
       <div className={classes.toolbarSpacer} id="about" />
       <Grid
         container={true}
@@ -81,6 +86,6 @@ export default withStyles(styles)(function About(props: Props) {
           </Typography>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 });
