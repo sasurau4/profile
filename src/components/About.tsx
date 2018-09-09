@@ -13,8 +13,6 @@ import MyPicture from '../images/my-profile-picture.jpg';
 
 const styles = (theme: Theme) =>
   createStyles({
-    // Required Grid component Limitations
-    // see https://material-ui.com/layout/grid/#negative-margin
     avatar: {
       height: 200,
       width: 200,
@@ -24,6 +22,8 @@ const styles = (theme: Theme) =>
       maxWidth: '100vw',
       minHeight: '100vh',
     },
+    // Required Grid component Limitations
+    // see https://material-ui.com/layout/grid/#negative-margin
     root: {
       padding: 16,
     },

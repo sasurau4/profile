@@ -1,6 +1,3 @@
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Chip from '@material-ui/core/Chip';
 import Grid from '@material-ui/core/Grid';
 import {
   createStyles,
@@ -8,8 +5,9 @@ import {
   withStyles,
   WithStyles,
 } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
+import { CareerCard } from '../components';
+import { CareerItems } from '../types';
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -22,7 +20,6 @@ const styles = (theme: Theme) =>
       flexWrap: 'wrap',
     },
     grid: {
-      flexGrow: 1,
       maxWidth: '100vw',
       minHeight: '100vh',
     },
@@ -34,17 +31,37 @@ const styles = (theme: Theme) =>
 
 interface Props extends WithStyles<typeof styles> {}
 
-const firstSkills = [
-  'Scala',
-  'Python',
-  'Javascript',
-  'jQuery',
-  'UI/UX',
-  'Sketch',
-  'Management',
+const careers: CareerItems[] = [
+  {
+    details: [
+      "I worked at WACUL INC. I worked for AI Analyst that's the SaaS product of WACUL.",
+      'First, I made report from Google Analytics with Microsoft Excel, Microsoft Power Point when I worked as part time job',
+      'After while, I joined WACUL as employee and was engaged in logic development',
+      'Next, I changed the job to UX design and Project management about AI Analyst. Think about features, screen layout and design, communications with bussiness and development team etc.',
+    ],
+    headline: 'August 2014 - February 2018',
+    positions: ['Data Scientist', 'UX designer', 'Project Manager'],
+    skills: [
+      'Scala',
+      'Python',
+      'Javascript',
+      'jQuery',
+      'UI/UX',
+      'Sketch',
+      'Management',
+    ],
+  },
+  {
+    details: [
+      'I work at M3 Career, Inc. I develop Native Mobile Application for Doctors',
+      "I'm mainly in charge of Front-End about development, using react-native. Occasionally, I develop Back-End that's written in Kotlin and Java.",
+    ],
+    headline: 'March 2017 - the present',
+    positions: ['Web Application Engineer'],
+    skills: ['React', 'React Native', 'Kotlin'],
+  },
 ];
 
-// const secondSkills = ['React', 'React Native', 'Kotlin'];
 export default withStyles(styles)(function Career(props: Props) {
   const { classes } = props;
   return (
@@ -53,75 +70,15 @@ export default withStyles(styles)(function Career(props: Props) {
       <Grid
         container={true}
         justify="center"
-        direction="column"
         alignItems="center"
         className={classes.grid}
         spacing={32}
       >
-        <Grid item={true}>
-          <Card>
-            <CardContent>
-              <Typography variant="headline" gutterBottom={true}>
-                August 2014 - February 2017
-              </Typography>
-              <Typography variant="subheading">Position</Typography>
-              <Typography gutterBottom={true}>
-                Data Scientist, UX designer, Project Manager
-              </Typography>
-              <Typography variant="subheading">Skills</Typography>
-              <div className={classes.chipsContainer}>
-                {firstSkills.map((item, i) => (
-                  <Chip
-                    label={item}
-                    key={i}
-                    color="primary"
-                    variant="outlined"
-                    className={classes.chip}
-                  />
-                ))}
-              </div>
-              <Typography variant="subheading" gutterBottom={true}>
-                Details
-              </Typography>
-              <Typography gutterBottom={true}>
-                I worked at WACUL INC.. First, I made report from Google
-                Analytics with Microsoft Excel, Microsoft Power Point.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item={true}>
-          <Card>
-            <CardContent>
-              <Typography variant="headline" gutterBottom={true}>
-                August 2014 - February 2017
-              </Typography>
-              <Typography variant="subheading">Position</Typography>
-              <Typography gutterBottom={true}>
-                Data Scientist, UX designer, Project Manager
-              </Typography>
-              <Typography variant="subheading">Skills</Typography>
-              <div className={classes.chipsContainer}>
-                {firstSkills.map((item, i) => (
-                  <Chip
-                    label={item}
-                    key={i}
-                    color="primary"
-                    variant="outlined"
-                    className={classes.chip}
-                  />
-                ))}
-              </div>
-              <Typography variant="subheading" gutterBottom={true}>
-                Details
-              </Typography>
-              <Typography gutterBottom={true}>
-                I worked at WACUL INC.. First, I made report from Google
-                Analytics with Microsoft Excel, Microsoft Power Point.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        {careers.map((career, i) => (
+          <Grid item={true} key={i} xs={12} md={8}>
+            <CareerCard {...career} />
+          </Grid>
+        ))}
       </Grid>
     </div>
   );

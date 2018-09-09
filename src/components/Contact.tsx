@@ -82,7 +82,7 @@ export default withStyles(styles)(function Contact(props: Props) {
         direction="column"
         alignItems="center"
         className={classes.grid}
-        spacing={40}
+        spacing={32}
       >
         <Grid item={true}>
           <Typography variant="display3" align="center" gutterBottom={true}>
