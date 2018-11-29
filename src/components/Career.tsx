@@ -56,7 +56,7 @@ const careers: CareerItems[] = [
       'I work at M3 Career, Inc. I develop Native Mobile Application for Doctors',
       "I'm mainly in charge of Front-End about development, using react-native. Occasionally, I develop Back-End that's written in Kotlin and Java.",
     ],
-    headline: 'March 2017 - the present',
+    headline: 'March 2018 - the present',
     positions: ['Web Application Engineer'],
     skills: ['React', 'React Native', 'Kotlin'],
   },
