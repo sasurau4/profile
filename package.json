@@ -21,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@types/classnames": "^2.2.7",
     "@types/styled-components": "^4.1.14",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.0"
   }
 }
