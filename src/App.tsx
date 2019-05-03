@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import styled from 'styled-components';
+import { Header, Main } from './components';
+import withRoot from './withRoot';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.StatelessComponent<{}> = () => (
+  <RootContainer>
+    <Header />
+    <Main />
+  </RootContainer>
+);
 
-export default App;
+export default withRoot(App);
+
+const RootContainer = styled.div`
+  display: flex;
+`;
