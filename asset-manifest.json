@@ -1,7 +1,16 @@
 {
-  "main.js": "static/js/main.5d1705a2.js",
-  "main.js.map": "static/js/main.5d1705a2.js.map",
-  "static/media/kirigamine-10_TP_V.jpg": "static/media/kirigamine-10_TP_V.4a6f2912.jpg",
-  "static/media/my-androidify.png": "static/media/my-androidify.4991b92e.png",
-  "static/media/my-profile-picture.jpg": "static/media/my-profile-picture.4a5e9b19.jpg"
+  "files": {
+    "main.js": "/static/js/main.e60876bf.chunk.js",
+    "main.js.map": "/static/js/main.e60876bf.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.e7060394.chunk.js": "/static/js/2.e7060394.chunk.js",
+    "static/js/2.e7060394.chunk.js.map": "/static/js/2.e7060394.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.dac2b72c287bc0f75b5b72df58d083c0.js": "/precache-manifest.dac2b72c287bc0f75b5b72df58d083c0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/kirigamine-10_TP_V.jpg": "/static/media/kirigamine-10_TP_V.0b370f02.jpg",
+    "static/media/my-androidify.png": "/static/media/my-androidify.4991b92e.png",
+    "static/media/my-profile-picture.jpg": "/static/media/my-profile-picture.4a5e9b19.jpg"
+  }
 }
