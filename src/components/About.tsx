@@ -43,10 +43,10 @@ export default withStyles(styles)(function About(props: Props) {
         direction="column"
         alignItems="center"
         className={classes.grid}
-        spacing={32}
+        spacing={4}
       >
         <Grid item={true}>
-          <Typography variant="display3" align="center" gutterBottom={true}>
+          <Typography variant="h3" align="center" gutterBottom={true}>
             About
           </Typography>
         </Grid>
@@ -56,7 +56,7 @@ export default withStyles(styles)(function About(props: Props) {
             justify="center"
             direction="row"
             alignItems="center"
-            spacing={16}
+            spacing={2}
           >
             <Grid item={true}>
               <Avatar
@@ -76,7 +76,7 @@ export default withStyles(styles)(function About(props: Props) {
         </Grid>
         <Grid item={true} xs={8} sm={6}>
           <Typography
-            variant="title"
+            variant="body1"
             align="center"
             color="textSecondary"
             paragraph={true}

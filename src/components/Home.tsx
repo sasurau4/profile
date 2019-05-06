@@ -44,14 +44,14 @@ const Home = withStyles(styles)((props: Props) => (
         className={props.classes.grid}
       >
         <Typography
-          variant="display3"
+          variant="h2"
           align="center"
           color="inherit"
           gutterBottom={true}
         >
           Daiki Ihara
         </Typography>
-        <Typography variant="headline" color="inherit" paragraph={true}>
+        <Typography variant="h3" color="inherit" paragraph={true}>
           Personal biography
         </Typography>
       </Grid>

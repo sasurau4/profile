@@ -82,10 +82,10 @@ export default withStyles(styles)(function Contact(props: Props) {
         direction="column"
         alignItems="center"
         className={classes.grid}
-        spacing={32}
+        spacing={4}
       >
         <Grid item={true}>
-          <Typography variant="display3" align="center" gutterBottom={true}>
+          <Typography variant="h3" align="center" gutterBottom={true}>
             Contact
           </Typography>
         </Grid>
@@ -95,7 +95,7 @@ export default withStyles(styles)(function Contact(props: Props) {
             justify="center"
             direction="row"
             alignItems="center"
-            spacing={32}
+            spacing={4}
           >
             {contacts.map((item, i) => (
               <Grid item={true} key={i}>

@@ -14,8 +14,8 @@ import { CareerItems } from '../types';
 const styles = (theme: Theme) =>
   createStyles({
     chip: {
-      marginBottom: theme.spacing.unit,
-      marginRight: theme.spacing.unit,
+      marginBottom: theme.spacing(2),
+      marginRight: theme.spacing(2),
     },
     chipsContainer: {
       display: 'flex',
@@ -34,12 +34,12 @@ const CareerCard = ({
 }: Props) => (
   <Card>
     <CardContent>
-      <Typography variant="headline" gutterBottom={true}>
+      <Typography variant="h6" gutterBottom={true}>
         {headline}
       </Typography>
-      <Typography variant="subheading">Position</Typography>
+      <Typography variant="subtitle2">Position</Typography>
       <Typography gutterBottom={true}>{positions.join(', ')}</Typography>
-      <Typography variant="subheading">Skills</Typography>
+      <Typography variant="subtitle2">Skills</Typography>
       <div className={classes.chipsContainer}>
         {skills.map((item, i) => (
           <Chip
@@ -51,7 +51,7 @@ const CareerCard = ({
           />
         ))}
       </div>
-      <Typography variant="subheading" gutterBottom={true}>
+      <Typography variant="subtitle2" gutterBottom={true}>
         Details
       </Typography>
       {details.map((detail, i) => (
