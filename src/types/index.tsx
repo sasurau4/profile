@@ -3,4 +3,5 @@ export interface CareerItems {
   positions: string[];
   skills: string[];
   details: string[];
+  links: string[];
 }
