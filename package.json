@@ -45,6 +45,6 @@
     "@types/classnames": "^2.2.10",
     "@types/styled-components": "^5.0.1",
     "gh-pages": "^2.2.0",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.2"
   }
 }
