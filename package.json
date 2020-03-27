@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.9",
-    "@types/styled-components": "^4.4.0",
+    "@types/styled-components": "^5.0.1",
     "gh-pages": "^2.1.1",
     "prettier": "^1.19.1"
   }
