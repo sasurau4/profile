@@ -1,8 +1,10 @@
-import AppBar from '@material-ui/core/AppBar';
-import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
-import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@mui/material/AppBar';
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
+import Toolbar from '@mui/material/Toolbar';
 
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 const styles = () =>

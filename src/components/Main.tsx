@@ -1,4 +1,6 @@
-import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
 import * as React from 'react';
 import { About, Career, Contact, Home } from '../components';
 

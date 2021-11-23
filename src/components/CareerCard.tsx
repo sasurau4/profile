@@ -1,14 +1,12 @@
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Chip from "@material-ui/core/Chip";
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Chip from "@mui/material/Chip";
+import { Theme } from "@mui/material/styles";
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import * as React from "react";
 import { CareerItems } from "../types";
 

@@ -1,12 +1,10 @@
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import { Theme } from '@mui/material/styles';
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
+import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
 import { GithubCircle, Linkedin, Twitter } from 'mdi-material-ui';
 import * as React from 'react';
@@ -78,7 +76,7 @@ export default withStyles(styles)(function Contact(props: Props) {
     <div id="contact" className={classes.root}>
       <Grid
         container={true}
-        justify="center"
+        justifyContent="center"
         direction="column"
         alignItems="center"
         className={classes.grid}
@@ -92,7 +90,7 @@ export default withStyles(styles)(function Contact(props: Props) {
         <Grid item={true}>
           <Grid
             container={true}
-            justify="center"
+            justifyContent="center"
             direction="row"
             alignItems="center"
             spacing={4}
@@ -103,7 +101,7 @@ export default withStyles(styles)(function Contact(props: Props) {
                   className={classes.iconButton}
                   href={item.to}
                   target="_blank"
-                >
+                  size="large">
                   {item.component}
                 </IconButton>
               </Grid>

@@ -1,10 +1,8 @@
-import Grid from "@material-ui/core/Grid";
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles
-} from "@material-ui/core/styles";
+import Grid from "@mui/material/Grid";
+import { Theme } from "@mui/material/styles";
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
 import * as React from "react";
 import { CareerCard } from "../components";
 import { CareerItems } from "../types";
@@ -113,7 +111,7 @@ export default withStyles(styles)(function Career(props: Props) {
       <div className={classes.toolbarSpacer} />
       <Grid
         container={true}
-        justify="center"
+        justifyContent="center"
         alignItems="center"
         className={classes.grid}
         spacing={4}

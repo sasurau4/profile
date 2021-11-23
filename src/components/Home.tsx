@@ -1,12 +1,10 @@
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import { Theme } from '@mui/material/styles';
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
+import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import Background from '../images/kirigamine-10_TP_V.jpg';
 
@@ -38,7 +36,7 @@ const Home = withStyles(styles)((props: Props) => (
     <div className={props.classes.backgroundFilter}>
       <Grid
         container={true}
-        justify="center"
+        justifyContent="center"
         direction="column"
         alignItems="center"
         className={props.classes.grid}

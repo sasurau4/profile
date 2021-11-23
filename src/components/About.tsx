@@ -1,12 +1,10 @@
-import Avatar from '@material-ui/core/Avatar';
-import Grid from '@material-ui/core/Grid';
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles,
-} from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import Avatar from '@mui/material/Avatar';
+import Grid from '@mui/material/Grid';
+import { Theme } from '@mui/material/styles';
+import { WithStyles } from '@mui/styles';
+import createStyles from '@mui/styles/createStyles';
+import withStyles from '@mui/styles/withStyles';
+import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import Androidfy from '../images/my-androidify.png';
 import MyPicture from '../images/my-profile-picture.jpg';
@@ -39,7 +37,7 @@ export default withStyles(styles)(function About(props: Props) {
       <div className={classes.toolbarSpacer} />
       <Grid
         container={true}
-        justify="center"
+        justifyContent="center"
         direction="column"
         alignItems="center"
         className={classes.grid}
@@ -53,7 +51,7 @@ export default withStyles(styles)(function About(props: Props) {
         <Grid item={true}>
           <Grid
             container={true}
-            justify="center"
+            justifyContent="center"
             direction="row"
             alignItems="center"
             spacing={2}
