@@ -1,4 +1,4 @@
-export interface CareerItems {
+export interface CareerItem {
   headline: string;
   positions: string[];
   skills: string[];
