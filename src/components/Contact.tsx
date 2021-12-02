@@ -1,63 +1,37 @@
-import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
-import { Theme } from '@mui/material/styles';
-import { WithStyles } from '@mui/styles';
-import createStyles from '@mui/styles/createStyles';
-import withStyles from '@mui/styles/withStyles';
-import Typography from '@mui/material/Typography';
-import classNames from 'classnames';
-import { GithubCircle, Linkedin, Twitter } from 'mdi-material-ui';
-import * as React from 'react';
+import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import { Github, Linkedin, Twitter } from 'mdi-material-ui'
 
-const styles = (theme: Theme) =>
-  createStyles({
-    githubIcon: { color: '#333' },
-    grid: {
-      maxWidth: '100vw',
-      minHeight: '100vh',
-    },
-    icon: {
-      fontSize: 80,
-    },
-    iconButton: {
-      height: 120,
-      width: 120,
-    },
-    linkedinIcon: {
-      color: '#0077B5',
-    },
-    root: {
-      padding: 16,
-    },
-    toolbarSpacer: theme.mixins.toolbar,
-    twitterIcon: {
-      color: '#00aced',
-    },
-  });
-
-interface Props extends WithStyles<typeof styles> {}
 interface ContactItem {
-  component: JSX.Element;
-  to: string;
+  component: JSX.Element
+  to: string
 }
 
-export default withStyles(styles)(function Contact(props: Props) {
-  const { classes } = props;
+export default (function Contact() {
   const contacts: ContactItem[] = [
     {
       component: (
         <Twitter
           key="twitter-icon"
-          className={classNames(classes.icon, classes.twitterIcon)}
+          fontSize="inherit"
+          sx={{
+            color: '#00aced',
+            fontSize: 80,
+          }}
         />
       ),
       to: 'https://twitter.com/sasurau4',
     },
     {
       component: (
-        <GithubCircle
+        <Github
           key="github"
-          className={classNames(classes.icon, classes.githubIcon)}
+          sx={{
+            color: '#333',
+            fontSize: 80,
+          }}
         />
       ),
       to: 'https://github.com/sasurau4',
@@ -66,20 +40,28 @@ export default withStyles(styles)(function Contact(props: Props) {
       component: (
         <Linkedin
           key="linkedin"
-          className={classNames(classes.icon, classes.linkedinIcon)}
+          sx={{
+            color: '#0077B5',
+            fontSize: 80,
+          }}
         />
       ),
       to: 'https://www.linkedin.com/in/daiki-ihara-8bb118106',
     },
-  ];
+  ]
   return (
-    <div id="contact" className={classes.root}>
+    <Container
+      id="contact"
+    >
       <Grid
         container={true}
         justifyContent="center"
         direction="column"
         alignItems="center"
-        className={classes.grid}
+        sx={{
+          maxWidth: '100vw',
+          minHeight: '100vh',
+        }}
         spacing={4}
       >
         <Grid item={true}>
@@ -98,10 +80,14 @@ export default withStyles(styles)(function Contact(props: Props) {
             {contacts.map((item, i) => (
               <Grid item={true} key={i}>
                 <IconButton
-                  className={classes.iconButton}
+                  sx={{
+                    height: 120,
+                    width: 120,
+                  }}
                   href={item.to}
                   target="_blank"
-                  size="large">
+                  size="large"
+                >
                   {item.component}
                 </IconButton>
               </Grid>
@@ -109,6 +95,6 @@ export default withStyles(styles)(function Contact(props: Props) {
           </Grid>
         </Grid>
       </Grid>
-    </div>
-  );
-});
+    </Container>
+  )
+})
