@@ -1,17 +1,12 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { Header, Main } from './components';
-import withRoot from './withRoot';
+import Box from '@mui/material/Box'
+import { Header, Main } from './components'
+import withRoot from './withRoot'
 
-const App: React.StatelessComponent<{}> = () => (
-  <RootContainer>
+const App: React.FunctionComponent<{}> = () => (
+  <Box sx={{ display: 'flex' }}>
     <Header />
     <Main />
-  </RootContainer>
-);
+  </Box>
+)
 
-export default withRoot(App);
-
-const RootContainer = styled.div`
-  display: flex;
-`;
+export default withRoot(App)

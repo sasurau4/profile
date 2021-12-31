@@ -1,30 +1,14 @@
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Chip from "@material-ui/core/Chip";
-import {
-  createStyles,
-  Theme,
-  withStyles,
-  WithStyles
-} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-import * as React from "react";
-import { CareerItems } from "../types";
+import Card from '@mui/material/Card'
+import Box from '@mui/material/Box'
+import CardContent from '@mui/material/CardContent'
+import Chip from '@mui/material/Chip'
+import Typography from '@mui/material/Typography'
+import Link from '@mui/material/Link'
+import { CareerItem } from '../types'
 
-const styles = (theme: Theme) =>
-  createStyles({
-    chip: {
-      marginBottom: theme.spacing(2),
-      marginRight: theme.spacing(2)
-    },
-    chipsContainer: {
-      display: "flex",
-      flexWrap: "wrap"
-    }
-  });
-
-interface Props extends WithStyles<typeof styles>, CareerItems {}
+type Props = CareerItem & {
+  isLast?: boolean
+}
 
 const CareerCard = ({
   headline,
@@ -32,27 +16,43 @@ const CareerCard = ({
   positions,
   details,
   links,
-  classes
+  isLast = false,
 }: Props) => (
-  <Card>
+  <Card
+    sx={[
+      isLast
+        ? {
+            backgroundColor: 'lemonchiffon',
+          }
+        : {},
+    ]}
+  >
     <CardContent>
       <Typography variant="h6" gutterBottom={true}>
         {headline}
       </Typography>
       <Typography variant="subtitle2">Position</Typography>
-      <Typography gutterBottom={true}>{positions.join(", ")}</Typography>
+      <Typography gutterBottom={true}>{positions.join(', ')}</Typography>
       <Typography variant="subtitle2">Skills</Typography>
-      <div className={classes.chipsContainer}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+        }}
+      >
         {skills.map((item, i) => (
           <Chip
             label={item}
             key={i}
             color="primary"
             variant="outlined"
-            className={classes.chip}
+            sx={{
+              mx: 0.5,
+              my: 0.5,
+            }}
           />
         ))}
-      </div>
+      </Box>
       <Typography variant="subtitle2" gutterBottom={true}>
         Details
       </Typography>
@@ -66,13 +66,13 @@ const CareerCard = ({
           Links
         </Typography>
       )}
-      {links.map((link, i) => (
-        <Typography>
+      {links.map((link) => (
+        <Typography key={link}>
           <Link href={link}>{link}</Link>
         </Typography>
       ))}
     </CardContent>
   </Card>
-);
+)
 
-export default withStyles(styles)(CareerCard);
+export default CareerCard
