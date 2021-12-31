@@ -66,8 +66,8 @@ const CareerCard = ({
           Links
         </Typography>
       )}
-      {links.map((link, i) => (
-        <Typography>
+      {links.map((link) => (
+        <Typography key={link}>
           <Link href={link}>{link}</Link>
         </Typography>
       ))}
