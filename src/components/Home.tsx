@@ -2,7 +2,6 @@ import Grid from '@mui/material/Grid'
 import Paper from '@mui/material/Paper'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import * as React from 'react'
 import Background from '../images/kirigamine-10_TP_V.jpg'
 
 const Home = () => (

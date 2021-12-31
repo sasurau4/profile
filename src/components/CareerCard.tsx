@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent'
 import Chip from '@mui/material/Chip'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
-import * as React from 'react'
 import { CareerItem } from '../types'
 
 type Props = CareerItem & {
