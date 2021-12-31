@@ -65,16 +65,25 @@ const careers: CareerItem[] = [
     links: ['https://news.oned.jp/app-release/', 'https://typescript-jp.dev/'],
   },
   {
-    details: ['TODO'],
-    headline: 'July 2021 - Present',
-    positions: ['Engineer', 'SRE'],
+    details: [
+      'I started SRE job at CureApp, Inc and joined various projects via THEHUB, Inc.',
+      'In SRE, I setup the application monitoring, researched technical challenge and think about determine SLO etc. The SRE team worked with each project members in entire company.',
+      'In THEHUB, I was involved to various application development projects. One is SaaS for Customer success with Laravel, another is Real time gaming app with Elixir and another is MEO application for Real store managers with Go.',
+      'I setup CI/CD, lead some projects and develop application with the team. All projects were exciting for me.'
+    ],
+    headline: 'Jun 2021 - Present',
+    positions: ['Full Engineer', 'SRE'],
     skills: [
       'Node.js',
-      'React Native',
       'TypeScript',
       'React',
       'aws-cdk',
-      'aws-amplify',
+      'AWS ECS',
+      'Terraform',
+      'PHP/Laravel',
+      'Elixir',
+      'Go',
+      'Docker'
     ],
     links: ['https://thehub.co.jp/'],
   },
