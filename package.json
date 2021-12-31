@@ -6,19 +6,15 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
-    "@material-ui/core": "^4.9.8",
     "@mui/material": "^5.1.1",
-    "@mui/styles": "^5.1.1",
     "@types/jest": "25.1.4",
     "@types/node": "12.12.11",
     "@types/react": "17.0.35",
     "@types/react-dom": "17.0.11",
-    "classnames": "^2.2.6",
     "mdi-material-ui": "^7.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "styled-components": "^4.4.1",
     "typescript": "4.5.2"
   },
   "scripts": {
@@ -46,8 +42,6 @@
     ]
   },
   "devDependencies": {
-    "@types/classnames": "^2.2.10",
-    "@types/styled-components": "^5.0.1",
     "gh-pages": "^2.2.0",
     "prettier": "^2.0.2"
   }
